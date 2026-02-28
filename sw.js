@@ -1,10 +1,11 @@
-const CACHE_NAME = 'bible-memory-v1';
+const CACHE_NAME = 'bible-memory-v3';
 const ASSETS_TO_CACHE = [
     './',
     './index.html',
     './style.css',
     './script.js',
-    './manifest.json'
+    './manifest.json',
+    './153psalmslogo.png'
 ];
 
 // 설치(Install) 이벤트: 캐시 생성 및 파일 저장
