@@ -2,6 +2,7 @@
   "name": "153 말씀암송 - 시편 121편",
   "short_name": "말씀암송",
   "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#f0f4f8",
   "theme_color": "#a1c4fd",
