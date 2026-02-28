@@ -1,4 +1,4 @@
-# 📖 153 말씀암송 (Psalm 121)
+# 📖 153 말씀암송 (Psalms 121)
 
 시편 121편을 쉽고 재미있게 암송할 수 있도록 돕는 웹 애플리케이션입니다.
 
@@ -22,4 +22,5 @@
 *   HTML5
 *   CSS3 (Flexbox, Animations)
 *   Vanilla JavaScript
+
 *   Google Fonts (Jua)
