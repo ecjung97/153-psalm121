@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>153 말씀암송 - 시편 121편</title>
+    <meta name="description" content="시편 121편을 쉽고 재미있게 암송할 수 있는 웹 앱입니다. 한글(개역개정)과 영어(NIV)를 지원하며, 빈칸 채우기 테스트 기능을 제공합니다.">
+    <meta name="keywords" content="성경암송, 시편 121편, 말씀암송, Bible Memory, Psalm 121, NIV, 개역개정, 주일학교, 기독교">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="153 말씀암송 - 시편 121편">
+    <meta property="og:description" content="시편 121편을 쉽고 재미있게 암송해보세요! (한글/영어/대조 모드 지원)">
+    <link rel="icon" href="153logo.png">
+    <link rel="apple-touch-icon" href="153logo.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <header>
+            <h1><img src="153logo.png" alt="로고" class="logo"> 153 말씀암송</h1>
+            <h3>시편 121편</h3>
+        </header>
+
+        <div class="controls-container">
+            <div class="settings-group">
+                <select id="languageSelect" onchange="changeLanguage()">
+                    <option value="ko">🇰🇷 한글 (개역개정)</option>
+                    <option value="en">🇺🇸 English (NIV)</option>
+                    <option value="both" selected>🇰🇷🇺🇸 한글 + 영어</option>
+                </select>
+                <select id="verseSelect" onchange="changeVerse()">
+                    <option value="all">📜 전체 보기</option>
+                    <option value="0">1절</option>
+                    <option value="1">2절</option>
+                    <option value="2">3절</option>
+                    <option value="3">4절</option>
+                    <option value="4">5절</option>
+                    <option value="5">6절</option>
+                    <option value="6">7절</option>
+                    <option value="7">8절</option>
+                </select>
+                <select id="difficultySelect" onchange="changeDifficulty()">
+                    <option value="0.2">⭐ 쉬움 (빈칸 20%)</option>
+                    <option value="0.5" selected>⭐⭐ 보통 (빈칸 50%)</option>
+                    <option value="0.8">⭐⭐⭐ 어려움 (빈칸 80%)</option>
+                </select>
+                <select id="interactionSelect" onchange="changeInteraction()">
+                    <option value="type">⌨️ 직접 입력하기</option>
+                    <option value="click">👆 클릭해서 보기</option>
+                </select>
+            </div>
+            <div class="actions-group">
+                <button class="btn-read" onclick="renderVerses('read')">👀 전체 읽기</button>
+                <button class="btn-memorize" onclick="renderVerses('memorize')">🧠 암송 시작</button>
+            </div>
+        </div>
+
+        <div id="bible-content"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful');
+                    })
+                    .catch(err => {
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
