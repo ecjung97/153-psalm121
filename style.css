@@ -187,3 +187,22 @@ button:active {
 .shake {
     animation: shake 0.4s;
 }
+
+.header-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.title-logo {
+    width: 50px;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    .title-logo {
+        width: 40px;
+    }
+}
