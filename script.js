@@ -80,8 +80,8 @@ function renderVerses(mode) {
         let verseHtml = `<span class="verse-num">${index + 1}.</span> `;
         
         if (lang === 'both') {
-            verseHtml += `<span>${processText(psalm121_ko[index])}</span>`;
-            verseHtml += `<div style="margin-top: 8px; color: #555; font-size: 0.95em;">${processText(psalm121_en[index])}</div>`;
+            verseHtml += `<span>${processText(psalm121_en[index])}</span>`;
+            verseHtml += `<div style="margin-top: 8px; color: #555; font-size: 0.95em;">${processText(psalm121_ko[index])}</div>`;
         } else {
             const text = (lang === 'en') ? psalm121_en[index] : psalm121_ko[index];
             verseHtml += processText(text);
